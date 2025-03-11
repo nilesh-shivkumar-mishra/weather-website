@@ -1,0 +1,9 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-image:url('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-459225.jpg&fm=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+}

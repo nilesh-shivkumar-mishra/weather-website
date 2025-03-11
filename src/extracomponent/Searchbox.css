@@ -1,0 +1,154 @@
+.weather{
+  width: 450px;
+  height: 550px;
+  margin: 60px auto ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(to top,rgb(0, 0, 0 ,0.15),rgb(255, 255, 255 ,0.15)) ;
+  backdrop-filter: blur(100px);
+}
+
+.form{
+  position: relative;
+  margin-top: 25px;
+}
+
+.form-label{
+  position: absolute;
+  top: 0.5rem;
+  left: 1.4rem;
+}
+
+
+.text-box{
+  border: 2px solid rgb(255, 255, 255 ,1);
+  background: none;
+  border-radius: 5px;
+  outline: none;
+  width: 250px;
+  padding: 10px;
+}
+
+
+.text-box:focus ~ .form-label , 
+.text-box:not(:placeholder-shown).text-box:not(:focus)~.form-label{
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 13px;
+  /* background:linear-gradient(to top,rgb(0, 0, 0 ,0.15),rgb(255, 255, 255 ,0.15)) ; */
+  backdrop-filter: blur(1px);
+  color: black;
+  transition: all 50ms ease-out;
+}
+
+
+
+.button{
+  color: white;
+  width: 100px;
+  margin-left: 1rem;
+  background-color: black;
+  border-radius:5px ;
+  padding: 6px;
+  font-size: 15px;
+}
+.button:hover{
+  color: black;
+  background-color:rgb(255, 255, 255 ,0.15);
+  transition: all 200ms ease;
+}
+
+.card {
+  margin-top: 1rem;
+  width: 450px;
+  height:550px;
+}
+
+/* importNt */
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+.card-image {
+  margin: auto;
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-image img{
+  width: 300px;
+  height: 150px;
+  object-fit: cover; /* it will cover hole hight and wigth thet given to img*/
+  /* object-fit: contain; it will do not stract cover */
+  /* object-fit: fill; */
+}
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 2rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.card-title{
+  display: flex
+}
+.temp_w{
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.temp_auto{
+  width: 445px;
+  margin: auto ;
+}
+
+.space-temp{
+  color: white;
+  display: flex;
+  gap: 5px;
+  font-size: large;
+
+}
+
+.temp_M{
+  background-color: rgb(0, 0, 0 ,0.4);
+  width: 225px;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+
+.temp_M div{
+  display: flex;
+  justify-content: center;
+}
+
+.humidity_speep{
+  background-color:  rgb(0, 0, 0 ,0.4);;
+  width: 220px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.huminity{
+  display: flex;
+  justify-content: center;
+}
+
+.speed{
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,0 +1,59 @@
+.max1 {
+  max-width: 80vw;
+}
+
+.m {
+  margin: auto;
+}
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.nav-left {
+  display: flex;
+  font-size: 18px;
+  gap: 3px;
+  align-items: center;
+}
+.ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  color: black;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black; /* this is form li whic is under a   */
+}
+
+.nav-left ul li a:hover {
+  color: red;
+  transition: all 0.3s ease-out;
+}
+
+.form-input {
+  font-size: 15px;
+  padding: 3px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.search-button {
+  margin: 0px 7px;
+  font-size: 15px;
+  padding: 3px 8px;
+  border-radius: 10px;
+ 
+  border: 2px solid black;
+  
+  color: black;
+  background-color: white;
+}
+.search-button:hover {
+  color: white;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
