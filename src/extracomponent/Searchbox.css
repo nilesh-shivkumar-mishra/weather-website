@@ -10,9 +10,18 @@
   backdrop-filter: blur(100px);
 }
 
+.cityc{
+ height: 35px;
+ 
+}
+.cityc p{
+  color: red;
+  padding: 0%;
+  margin: 0%;
+}
+
 .form{
   position: relative;
-  margin-top: 25px;
 }
 
 .form-label{

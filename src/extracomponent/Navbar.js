@@ -8,17 +8,10 @@ export default class Navbar extends Component {
       <div>
         <nav className={`Nav max1 m`}>
           <div className={`nav-left`}>
-            <span>UNTIL GO</span>
+            <span>WeatherApp</span>
             <span>
             <ul className={`ul`}>
               <li><a href="/">Home</a></li>
-              <li><a href="/business">Business</a> </li>
-              <li><a href="/entertainment">Entertainment</a></li>
-              <li><a href="/general">General</a></li>
-              <li><a href="/health">Health</a></li>
-              <li><a href="/science">Science</a></li>
-              <li><a href="/sports">Sports</a></li>
-              <li><a href="/technology">Technology</a></li>
             </ul>
             </span>
           </div>

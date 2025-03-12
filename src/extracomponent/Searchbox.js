@@ -21,6 +21,7 @@ import 	scatteredclouds  from "../scattered.png"
 
 
 function Searchbox(props) {
+  const [cityNotFound, setCityNotFound] = useState(false);
   let [city , setCity]= useState('');
   let [weatherdata , setWeatherdata]= useState({});
 
@@ -44,21 +45,36 @@ function Searchbox(props) {
       let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
       let jsonResponse = await response.json();
       console.log(jsonResponse);
-  
-      
-      let result ={
-        city:city,
-        temp:jsonResponse.main.temp,
-        tempMin:jsonResponse.main.temp_min,
-        tempMax:jsonResponse.main.temp_max,
-        humidity:jsonResponse.main.humidity,
-        weatherdes:jsonResponse.weather[0].description,
-        // mai:jsonResponse.weather[0].main,   // main se bhi hum log weather condition img change kar sakta hai
-        // icon:jsonResponse.weather[0].icon,  // icon for feacting weather econdition img from website
-        speed:jsonResponse.wind.speed
-      };
-      console.log(result);
-      setWeatherdata(result);
+
+
+      if (jsonResponse.cod === "404") {
+        // If city is not found, set cityNotFound to true
+        setCityNotFound(true);
+
+        setTimeout(() => {
+          setCityNotFound(false);
+        }, 5000);
+
+      } else {
+        // If city is found, set the weather data
+        setCityNotFound(false);
+
+        let result ={
+          city:city,
+          temp:jsonResponse.main.temp,
+          tempMin:jsonResponse.main.temp_min,
+          tempMax:jsonResponse.main.temp_max,
+          humidity:jsonResponse.main.humidity,
+          weatherdes:jsonResponse.weather[0].description,
+          // mai:jsonResponse.weather[0].main,   // main se bhi hum log weather condition img change kar sakta hai
+          // icon:jsonResponse.weather[0].icon,  // icon for feacting weather econdition img from website
+          speed:jsonResponse.wind.speed
+        };
+        console.log(result);
+        setWeatherdata(result);
+        
+    };
+
   }
 
   useEffect(()=>{
@@ -69,6 +85,10 @@ function Searchbox(props) {
   return (
     <div>
       <div className="weather">
+        <div  className='cityc' >
+        {cityNotFound && <p>Search City Name is Not Available in API</p>}
+        </div>
+     
         <form onSubmit={handlesubmit} className="form">
           <input className="text-box" type="text" placeholder=""  onChange={handlechanege} value={city}  required/>
           <label className="form-label">Enter City Name</label>
