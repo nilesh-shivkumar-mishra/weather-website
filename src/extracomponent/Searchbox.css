@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(to top,rgb(0, 0, 0 ,0.15),rgb(255, 255, 255 ,0.15)) ;
+  background:linear-gradient(to top,rgb(0, 0, 0 ,1),rgb(255, 255, 255 ,0.20)) ;
   backdrop-filter: blur(100px);
 }
 
@@ -76,13 +76,14 @@ h3{
   margin: auto;
   width: 300px;
   height: 150px;
+
   overflow: hidden;
 }
 
 .card-image img{
   width: 300px;
   height: 150px;
-  object-fit: cover; /* it will cover hole hight and wigth thet given to img*/
+  object-fit: contain; /* it will cover hole hight and wigth thet given to img*/
   /* object-fit: contain; it will do not stract cover */
   /* object-fit: fill; */
 }
