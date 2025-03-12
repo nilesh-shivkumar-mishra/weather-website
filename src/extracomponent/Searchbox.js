@@ -30,14 +30,10 @@ function Searchbox(props) {
   };
 
   let handlesubmit =(evt)=>{
-    try{
       evt.preventDefault();
       console.log(city);
       getweatherinfo(city);
       setCity("");
-    }catch{
-      SetError(true)
-    }
    
   }
 
@@ -45,7 +41,6 @@ function Searchbox(props) {
   const API_KEY ="125be580cf56f636075936141071bf65";
 
   let getweatherinfo = async(city)=>{
-    try{
       let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
       let jsonResponse = await response.json();
       console.log(jsonResponse);
@@ -64,9 +59,6 @@ function Searchbox(props) {
       };
       console.log(result);
       setWeatherdata(result);
-    }catch(err){
-      throw err;
-  }
   }
 
   useEffect(()=>{
