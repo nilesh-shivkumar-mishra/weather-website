@@ -102,7 +102,7 @@ function Searchbox(props) {
               <span><h3>  {weatherdata.city} Weather </h3></span>
             </div>
             <div className = {`card-image` }>
-              <img src={weatherdata.weatherdes === "smoke"?clear:weatherdata.weatherdes === "scattered clouds"?scatteredclouds:weatherdata.weatherdes === "clear sky"?clear:weatherdata.weatherdes === "few clouds"?clouds:weatherdata.weatherdes === "shower rain"?rain:weatherdata.weatherdes === "overcast clouds"?overcast:weatherdata.weatherdes === "mist"?mist:weatherdata.weatherdes === "snow"?snow:weatherdata.weatherdes === "broken clouds"?brokencloud :weatherdata.weatherdes === "haze"?haze:weatherdata.weatherdes === "rain"?clouds :weatherdata.weatherdes === "thunderstorm"?thunderstorm:clear } alt="loDING" />
+              <img src={weatherdata.weatherdes === "light snow"?snow:weatherdata.weatherdes === "smoke"?clear:weatherdata.weatherdes === "scattered clouds"?scatteredclouds:weatherdata.weatherdes === "clear sky"?clear:weatherdata.weatherdes === "few clouds"?clouds:weatherdata.weatherdes === "shower rain"?rain:weatherdata.weatherdes === "overcast clouds"?overcast:weatherdata.weatherdes === "mist"?mist:weatherdata.weatherdes === "snow"?snow:weatherdata.weatherdes === "broken clouds"?brokencloud :weatherdata.weatherdes === "haze"?haze:weatherdata.weatherdes === "rain"?clouds :weatherdata.weatherdes === "thunderstorm"?thunderstorm:clear } alt="loDING" />
               {/* <img src={`https://openweathermap.org/img/wn/${weatherdata.icon}@2x.png`} alt="" /> // feacting weather econdition img from website  */} 
             </div>
           
