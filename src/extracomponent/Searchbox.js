@@ -19,6 +19,10 @@ import 	thunderstorm  from "../thunderstorm.png"
 import 	scatteredclouds  from "../scattered.png"
 
 
+const capitalizeCityName=(cityName)=> {
+  return cityName.charAt(0).toUpperCase() + cityName.slice(1).toLowerCase();
+}
+
 
 function Searchbox(props) {
   const [cityNotFound, setCityNotFound] = useState(false);
@@ -33,7 +37,7 @@ function Searchbox(props) {
   let handlesubmit =(evt)=>{
       evt.preventDefault();
       console.log(city);
-      getweatherinfo(city);
+      getweatherinfo(capitalizeCityName(city));
       setCity("");
    
   }
