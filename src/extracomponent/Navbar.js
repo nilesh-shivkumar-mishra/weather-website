@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React, {useState} from 'react'
 import  "./Navbar.css"
 
-
-export default class Navbar extends Component {
-  render() {
+const Navbar = () => {
     return (
       <div>
         <nav className={`Nav max1 m`}>
@@ -26,5 +24,6 @@ export default class Navbar extends Component {
         </nav>
       </div>
     );
-  }
 }
+
+export default Navbar
